@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+skdbhfusidfuid
+{% endblock %}
+
+{% block body %}
+<div class="mt-5">
+    <h1>Добавление поста</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Название статьи"><br>
+        <input type="text" name="youtube_id" id="youtube_id" class="form-control" placeholder="Видоски с Ютуба(необязательно)"><br>
+        <input type="file" name="image" id="image" accept="image/*"><br>
+        <textarea name="intro" id="intro" class="form-control" placeholder="Вступление"></textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Текст"></textarea><br>
+        <input type="submit" class="btn-succes" value="Отправить"><br>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,91 @@
+body {
+    background-color: #93ABD9;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 14px;
+    cursor: color white;
+}
+img{
+    width: 80px;
+    height: 80px;
+    margin: 15px;
+}
+
+h1{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+.con{
+    display: flex;
+    background-color: rgb(70, 70, 70);
+    align-items: center;
+    height: 90px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.con-text{
+    margin-left: 80px;
+}
+
+.con-text>p{
+    width: 500px;
+    height: 80px;
+    color: white;
+    place-content: center;
+}
+.con-ghost{
+    width: 25%;
+}
+
+.con-buttons{
+    display: flex;
+    margin: 16px;
+    place-items: center;
+    gap: 60px;
+}
+
+.con-buttons>a{
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    align-self: center;
+}
+
+#enter{
+    background-color: rgb(50, 50, 255);
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+#leave{
+    background-color: rgb(50, 50, 255);
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+#leave:hover{
+    color: white;
+    background-color: red;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgb(255, 0, 0);
+}
+
+#enter:hover{
+    color: white;
+    background-color: #57C785;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px #57C785;
+}
+
+.con-buttons>a:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>{{ article.title }}</h1>
+
+    <div class="alert-info">
+        {% if article.image and article.image != '' %}
+        <img src="{{ url_for('static', filename='uploads/' ~ article.image) }}" alt="">
+        {% endif %}
+        <p class="texttt">{{ article.text }}</p>
+        {% if article.youtube_id and article.youtube_id != "" %}
+            <p><a href="{{ article.youtube_id }}" target="_blank" >
+                🔗 Открыть на YouTube
+            </a></p>
+        {% endif %}
+        <a class="btn btn-warning" href="/">Назад</a>
+        <p><b>{{ article.date.date() }}</b></p>
+        {% if current_user.is_authenticated and current_user.is_admin() %}
+        <a href="{{ article.id }}/del" class="btn-danger">Удалить</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

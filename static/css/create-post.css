@@ -1,0 +1,136 @@
+.mt-5{
+    margin: 20px;
+    margin-top: 30px;
+    width: 500px;
+    height: auto;
+    place-self: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.mt-5>h1{
+    padding-top: 15px;
+    place-self: center;
+    color: #667eea;
+}
+
+/* form{
+    gap: 20px;
+}
+
+.btn-succes{
+    background-color: green;
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.btn-succes:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+} */
+
+/* .container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+} */
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
+    width: 75%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 2px solid #e1e5ee;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-5px);
+}
+
+.form-control::placeholder {
+    color: #a0a4b8;
+}
+
+.mt-5-form{
+    gap: 15px;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+    color: white;
+    cursor: pointer;
+}
+
+#intro {
+    min-height: 80px;
+}
+
+#text {
+    min-height: 200px;
+}
+
+.btn-succes {
+    width: 50%;
+    padding: 15px;
+    background: linear-gradient(135deg, #000000, #ffffff);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-succes:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgb(255, 255, 255);
+}
+
+input{
+    width: 50%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 2px solid #e1e5ee;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+}
+
+input:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgb(255, 255, 255);
+}
+
+#youtube_id:hover{
+    cursor: pointer;
+}

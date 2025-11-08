@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/create-post.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/0x0_1804x1920__size__logo.png') }}">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self';
+        style-src 'self';
+        img-src 'self' data: https:;
+        font-src 'self';
+        connect-src 'self';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        frame-ancestors 'none';
+    ">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div class="con">
+        <img src="{{ url_for('static', filename='images/0x0_1804x1920__size__logo.png') }}" alt="logo">
+        <div class="con-text">
+            <p>МБОУ СОШ 27</p>
+        </div>
+        <div class="con-ghost"></div>
+
+        <div class="con-buttons">
+            <!-- <input type="button" value="Добавить пост" href="/add-post">
+            <input type="button" value="Посты" href="/">
+            <input type="button" value="Статьи"> -->
+            <a href="/">Посты</a>
+            {% if current_user.is_authenticated and current_user.is_teacher() %}
+            <a href="/add-post">Добавить пост</a>
+            {% endif %}
+            {% if not(current_user.is_authenticated)%}
+            <a href="/login" class="enter" id="enter">Войти</a>
+            {% endif %}
+            {% if current_user.is_authenticated and current_user.is_teacher() %}
+            <a href="/logout" class="enter" id="leave">Выйти</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="all-content">
+        <div class="conten-1">
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+            <h1>Временное заполнение</h1>
+        </div>
+        <div class="content-2">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+</body>
+<script src="#" type="text/javascript" defer></script>
+</html>

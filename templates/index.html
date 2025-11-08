@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница
+{% endblock %}
+
+{% block body %}
+<div class="post">
+    <h1>Все посты</h1>
+
+    {% if articles|length > 0 %}
+        {% for el in articles %}
+        <div class="alert-info">
+            <h2>{{ el.title }}</h2>
+            <p>{{ el.intro }}</p>
+            {% if el.image and el.image != '' %}
+            <img src="{{ url_for('static', filename='uploads/' ~ el.image) }}" 
+                 alt="none">
+            {% endif %}
+            <p><b>{{ el.date.date() }}</b></p>
+            <a class="btn btn-warning" href="/posts/{{ el.id }}">Детальнее</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>Здесь пока ничего нет</p>
+    {% endif %}
+</div>
+{% endblock %}
